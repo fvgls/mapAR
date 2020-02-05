@@ -16,39 +16,51 @@
         <a-assets>
             <img id="earth"
                 src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg">
-        </a-assets> 
+            <img id="earthSphere"
+                src="./images/earth-sphere.jpg">
+
+            <img id="grid"
+            src="./images/border.png">
+        </a-assets>
 
     
-        <a-marker preset="hiro" value="0" id="m0" registerevents>
+        <a-marker preset="hiro" id="m0" registerevents>
+
             <a-plane position="0 0 0"
             rotation="-90 0 0"
             width="10"
             height="10"
-            src=#earth material="transparent: true; opacity: 0.5"></a-plane>
-            <a-box position="0 0 0.5" width="0.5" color="yellow"></a-box>
-            <a-box position="0 0 -0.5" width="0.5" color="green"></a-box>
+            color="grey" material="transparent: true; opacity: 0.5"></a-plane>
+
+            <a-entity id="box1" position="0.5 0.5 0.5"
+            geometry="primitive: box" scale="0.5 0 0.5" material="src: #grid;color: yellow"></a-entity>
+
+            <a-entity id="box2" position="-0.5 0.5 -0.5" geometry="primitive: box" scale="0.5 0 0.5" material="src: #grid;color: green"></a-entity>
+
+            <a-entity id="box3" position="-3 0.5 -3"
+            geometry="primitive: box" scale="3 0 3" material="src: #grid; color: blue; transparent: true; opacity: 0.30;"></a-entity>
+
+            <a-entity id="cylinder1" position="3 0.5 -3" geometry="primitive: cylinder" radius="0.5" heigth="0.1" material="color: pink"></a-entity>
+
+            <a-entity id="cone1" position="-3 0.7 3" geometry="primitive: cone" heigth="0.1" material="color: red"></a-entity>
+
+            <a-entity geometry="primitive: sphere" position="3 0.7 3" material="src: #earthSphere" radius="0.5">
+   </a-sphere> 
         </a-marker>
 
-        <a-marker preset="kanji" value="1" id="m1" registerevents>
-            <a-plane position="0 0 0" 
-                     rotation="-90 0 0"
-                     material="color: green; transparent: true; opacity: 0.10;">
-            </a-plane>
+        <a-marker preset="kanji" id="m1" registerevents>
+            <!-- <a-box id="box3" position="0 1.5 0"
+                     scale="0.5 3 0.5"
+                     material="color: red;">
+            </a-box> -->
         </a-marker>
 
         <a-entity camera></a-entity>
+
+        <a-entity run></a-entity>
     </a-scene>
 </body>
 
 </html>
 
 
-<!-- <a-assets>
-            <img id="earth"
-                src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg">
-        </a-assets> 
-    <a-plane rotation="-90 0 0"
-            width="100"
-            height="100"
-            src=#earth></a-plane>
-            <a-box position="2 0 0" color="red"></a-box> -->
