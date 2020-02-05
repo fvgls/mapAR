@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Pouet</title>
+
+    <link rel="stylesheet"
+        type="text/css"
+        href="./css/LoadingScreen.css">
+
+
+
+    <script src="./js/itowns.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+</head>
+
+<body>
+    <!-- <script src="script.js"></script>
+            <a-entity id="map" position="1 2 3"></a-entity>
+    </a-scene> -->
+    <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+        <!-- <div id="htmlElement"
+            style="background: #F8F8F8; color: #333; font-size: 48px">Hello, HTML!</div> -->
+        <div id="viewerDiv"></div>
+    </div>
+
+    <script src="./js/GUI/GuiTools.js"></script>
+    <script src="./js/itowns.js"></script>
+    <script src="./js/GUI/LoadingScreen.js"></script>
+    <script src="./js/debug.js"></script>
+    <script src="./js/three.js/build/three.js"></script>
+    <script src="script.js"></script>
+
+    <!-- <a-scene>
+        <a-entity map="color: green;"
+            position="0 1 -5"> </a-entity>
+    </a-scene> -->
+
+    <a-scene>
+        <a-entity geometry="primitive: box"
+            material="shader: html; target: #viewerDiv"></a-entity>
+    </a-scene>
+
+
+
+
+</body>
+
+</html>
