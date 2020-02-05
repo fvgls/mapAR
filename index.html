@@ -22,6 +22,8 @@
 
             <img id="grid"
                 src="./images/border.png">
+            <img id="ensg"
+                src="./images/logo-ensg.png">
         </a-assets>
 
 
@@ -65,7 +67,7 @@
                 position="-2 0.7 2"
                 geometry="primitive: cone"
                 heigth="0.1"
-                material="color: red"></a-entity>
+                material="src: #ensg"></a-entity>
 
             <a-entity geometry="primitive: sphere"
                 position="2 0.7 2"
@@ -73,7 +75,10 @@
                 radius="0.5">
             </a-entity>
 
-            <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.2; arc: 180" position="2 0.7 0" scale="0.3 0.3 0.3" material="color: purple"></a-entity>
+            <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.2; arc: 180"
+                position="2 0.7 0"
+                scale="0.3 0.3 0.3"
+                material="color: purple"></a-entity>
 
         </a-marker>
 
