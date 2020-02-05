@@ -58,10 +58,10 @@ AFRAME.registerComponent('run', {
                         scale.y = 1;
                         entity.setAttribute("scale", scale);
 
-                        entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "0 0 360", loop: true });
+                        entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "0 360 0", loop: true });
                         break;
                     case "box":
-                        scale.y = 3;
+                        scale.y = 2;
                         entity.setAttribute("scale", scale);
 
                         position.y = 1.5;
@@ -70,7 +70,7 @@ AFRAME.registerComponent('run', {
                         entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "0 360 0", loop: true });
                         break;
                     case "cylinder":
-                        scale.y = 3;
+                        scale.y = 2;
                         entity.setAttribute("scale", scale);
 
                         position.y = 1.5;
@@ -79,7 +79,7 @@ AFRAME.registerComponent('run', {
                         entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "360 0 360", loop: true });
                         break;
                     case "cone":
-                        scale.y = 3;
+                        scale.y = 2;
                         entity.setAttribute("scale", scale);
 
                         position.y = 1.5;
