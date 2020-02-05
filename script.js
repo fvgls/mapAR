@@ -70,10 +70,10 @@ AFRAME.registerComponent('run', {
                         entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "0 360 0", loop: true });
                         break;
                     case "cylinder":
-                        scale.y = 2;
+                        scale.y = 1.2;
                         entity.setAttribute("scale", scale);
 
-                        position.y = 1.5;
+                        position.y = 1.0;
                         entity.setAttribute("position", position);
 
                         entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "360 0 360", loop: true });
@@ -86,6 +86,15 @@ AFRAME.registerComponent('run', {
                         entity.setAttribute("position", position);
 
                         entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "0 0 360", loop: true });
+                        break;
+                    case "torus":
+                        scale.y = 0.3;
+                        entity.setAttribute("scale", scale);
+
+                        position.y = 1.5;
+                        entity.setAttribute("position", position);
+
+                        entity.setAttribute("animation__rotate", { property: "rotation", dur: 8000, easing: "linear", dir: "normal", from: "0 0 0", to: "360 360 360", loop: true });
                         break;
                 }
 

@@ -11,7 +11,8 @@
 <body>
     <script src="script.js"></script>
 
-    <a-scene embedded arjs="debugUIEnabled:false;">
+    <a-scene embedded
+        arjs="debugUIEnabled:false;">
 
         <a-assets>
             <img id="earth"
@@ -20,35 +21,65 @@
                 src="./images/earth-sphere.jpg">
 
             <img id="grid"
-            src="./images/border.png">
+                src="./images/border.png">
         </a-assets>
 
-    
-        <a-marker preset="hiro" id="m0" registerevents>
+
+        <a-marker preset="hiro"
+            id="m0"
+            registerevents>
 
             <a-plane position="0 0 0"
-            rotation="-90 0 0"
-            width="10"
-            height="10"
-            color="grey" material="transparent: true; opacity: 0.5"></a-plane>
+                rotation="-90 0 0"
+                width="10"
+                height="10"
+                color="grey"
+                material="transparent: true; opacity: 0.5"></a-plane>
 
-            <a-entity id="box1" position="0.5 0.5 0.5"
-            geometry="primitive: box" scale="0.5 0 0.5" material="src: #grid;color: yellow"></a-entity>
+            <a-entity id="box1"
+                position="0.5 0.5 0.5"
+                geometry="primitive: box"
+                scale="0.5 0 0.5"
+                material="src: #grid;color: yellow"></a-entity>
 
-            <a-entity id="box2" position="-0.5 0.5 -0.5" geometry="primitive: box" scale="0.5 0 0.5" material="src: #grid;color: green"></a-entity>
+            <a-entity id="box2"
+                position="-0.5 0.5 -0.5"
+                geometry="primitive: box"
+                scale="0.5 0 0.5"
+                material="src: #grid;color: green"></a-entity>
 
-            <a-entity id="box3" position="-2 0.5 -2"
-            geometry="primitive: box" scale="2 0 2" material="src: #grid; color: blue; transparent: true; opacity: 0.30;"></a-entity>
+            <a-entity id="box3"
+                position="-2 0.5 -2"
+                geometry="primitive: box"
+                scale="2 0 2"
+                material="src: #grid; color: blue; transparent: true; opacity: 0.30;"></a-entity>
 
-            <a-entity id="cylinder1" position="2 0.5 -2" geometry="primitive: cylinder" radius="0.5" heigth="0.1" material="color: pink"></a-entity>
+            <a-entity id="cylinder1"
+                position="2 0.5 -2"
+                geometry="primitive: cylinder; radius: 0.5;"
+                radius="0.3"
+                heigth="0.1"
+                material="color: pink"></a-entity>
 
-            <a-entity id="cone1" position="-2 0.7 2" geometry="primitive: cone" heigth="0.1" material="color: red"></a-entity>
+            <a-entity id="cone1"
+                position="-2 0.7 2"
+                geometry="primitive: cone"
+                heigth="0.1"
+                material="color: red"></a-entity>
 
-            <a-entity geometry="primitive: sphere" position="2 0.7 2" material="src: #earthSphere" radius="0.5">
-   </a-sphere> 
+            <a-entity geometry="primitive: sphere"
+                position="2 0.7 2"
+                material="src: #earthSphere"
+                radius="0.5">
+            </a-entity>
+
+            <a-entity geometry="primitive: torus; radius: 2; radiusTubular: 0.2; arc: 180" position="2 0.7 0" scale="0.3 0.3 0.3" material="color: purple"></a-entity>
+
         </a-marker>
 
-        <a-marker preset="kanji" id="m1" registerevents>
+        <a-marker preset="kanji"
+            id="m1"
+            registerevents>
             <!-- <a-box id="box3" position="0 1.5 0"
                      scale="0.5 3 0.5"
                      material="color: red;">
@@ -62,5 +93,3 @@
 </body>
 
 </html>
-
-
